@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import background from "/public/background/background-primary.svg";
+import Link from "next/link";
 
 export default function HomeLandingpage() {
   return (
@@ -31,12 +32,14 @@ export default function HomeLandingpage() {
             and <span className="font-bold">Machine Learning,</span> with a
             focus on computer vision.
           </p>
-          <Button
-            variant={"rgb"}
-            className="mt-10 text-lg rounded-full shadow-lg transform hover:scale-110  transition-transform text-black"
-          >
-            Hire me
-          </Button>
+          <Link href="https://www.linkedin.com/in/verry-kurniawan/">
+            <Button
+              variant={"rgb"}
+              className="mt-10 text-lg rounded-full shadow-lg transform hover:scale-110  transition-transform text-black"
+            >
+              Hire me
+            </Button>
+          </Link>
         </div>
       </section>
     </>
