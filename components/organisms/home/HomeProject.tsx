@@ -16,8 +16,8 @@ export default function HomeProject() {
             className="animate-pulse"
           />
         </div>
-        <CardProject />
         <div id="project"></div>
+        <CardProject />
       </section>
     </>
   );
