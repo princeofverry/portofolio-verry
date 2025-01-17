@@ -4,7 +4,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Code2, Contact, House } from "lucide-react";
+import { CircleUserRound, Code2, House } from "lucide-react";
 import Link from "next/link";
 
 const nav = [
@@ -19,7 +19,7 @@ const nav = [
     href: "#project",
   },
   {
-    icon: <Contact />,
+    icon: <CircleUserRound />,
     name: "Contact Me",
     href: "#contact",
   },
