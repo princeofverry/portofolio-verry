@@ -10,8 +10,8 @@ export default function HomeWrapper() {
       <section className="overflow-hidden bg-black">
         <HomeLandingpage />
         <HomeMarquee />
-        <HomeAward />
         <HomeExperience />
+        <HomeAward />
         <HomeProject />
       </section>
     </>

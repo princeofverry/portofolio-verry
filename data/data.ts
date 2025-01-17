@@ -33,31 +33,32 @@ export const Project = [
     id: 1,
     title: "Dopamind+",
     image: "/images/dopamind.png",
-    description: "lorem ipsum dolor sit amet, consectetur adipis...",
+    link: "https://dopamind.site",
+    description:
+      "An app from the Bangkit Academy capstone project that tracks users' mood through daily diary entries, offering insights into mental health.",
   },
   {
     id: 2,
-    title: "MindfulMe",
-    image: "/images/bangkit.png",
-    description: "Explore mindfulness techniques for better mental health.",
+    title: "Codelingo",
+    image: "/images/codelingo.png",
+    link: "https://codelingo-dev.vercel.app/",
+    description:
+      "A coding platform for elementary school students that teaches programming basics through fun games and challenges.",
   },
   {
     id: 3,
-    title: "FocusFlow",
-    image: "/images/bangkit.png",
-    description: "A productivity app to help you stay focused and organized.",
+    title: "The Ace",
+    image: "/images/the-ace.png",
+    link: "https://theace-2024.vercel.app/",
+    description:
+      "A competition registration website for the Computer Engineering Department at Diponegoro University, streamlining event sign-ups.",
   },
   {
     id: 4,
-    title: "HappyHabits",
-    image: "/images/bangkit.png",
-    description: "Track your habits and improve your well-being over time.",
-  },
-  {
-    id: 5,
-    title: "ZenSpace",
-    image: "/images/bangkit.png",
+    title: "Ship Monitoring",
+    image: "/images/monitoring.png",
+    link: "/",
     description:
-      "A virtual space to practice relaxation techniques and meditate.",
+      "A real-time ship monitoring system for autonomous applications, tracking speed, direction, angle, and mission status.",
   },
 ];
