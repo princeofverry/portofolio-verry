@@ -32,7 +32,7 @@ const techStack = [
   },
   {
     name: "TypeScript",
-    image: "/images/typeScript.png",
+    image: "/images/typescript.png",
   },
 ];
 

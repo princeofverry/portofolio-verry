@@ -28,8 +28,9 @@ const nav = [
 export default function Navbar() {
   return (
     <>
-      <div className="fixed flex z-30 h-10 my-10 w-full items-center justify-center">
-        <div className="top-0 h-10 w-fit p-1 rounded-3xl bg-gradient-to-r from-red-400 via-green-400  to-blue-600">
+      <div className="fixed flex z-30 h-10 py-10 w-full items-center justify-center">
+        <div className="absolute top-0 z-30 h-20 w-full bg-gradient-to-b from-black to-transparent dark:from-zinc-950"></div>
+        <div className="top-0 h-10 z-40 w-fit p-1 rounded-3xl bg-gradient-to-r from-red-400 via-green-400  to-blue-600">
           <div className="flex h-full gap-x-2 px-2 items-center justify-center rounded-2xl bg-gray-800 text-white">
             {nav.map((item, i) => (
               <Tooltip delayDuration={100} key={i}>
