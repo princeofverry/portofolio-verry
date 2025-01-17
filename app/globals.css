@@ -62,11 +62,14 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  .pad-x {
+    @apply px-4 md:px-[6%] lg:px-[8%];
   }
-  body {
-    @apply bg-background text-foreground;
+  .no-scrollbar {
+    scrollbar-width: none;
   }
+}
+* {
+  scroll-behavior: smooth;
 }
