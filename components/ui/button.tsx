@@ -19,6 +19,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         navlink: "",
+        rgb: "bg-gradient-to-r from-red-400 via-green-400  to-blue-600 shadow",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

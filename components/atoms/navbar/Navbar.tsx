@@ -11,17 +11,17 @@ const nav = [
   {
     icon: <House />,
     name: "Home",
-    href: "/",
+    href: "#home",
   },
   {
     icon: <Code2 />,
     name: "Project",
-    href: "/project",
+    href: "#project",
   },
   {
     icon: <Contact />,
     name: "Contact Me",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
