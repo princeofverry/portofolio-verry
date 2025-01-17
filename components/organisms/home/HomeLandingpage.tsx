@@ -22,7 +22,7 @@ export default function HomeLandingpage() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold ">
               Hello
             </h1>
-            <h1 className="md:text-8xl animate-rotate-infinity">👋</h1>
+            <h1 className="md:text-8xl text-4xl animate-rotate-infinity">👋</h1>
           </div>
           <p className="mt-6 text-base lg:text-xl text-gray-300 max-w-2xl">
             I’m <span className="font-bold">Verry Kurniawan.</span> I specialize
