@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between">
             {/* Logo/Brand */}
-            <Link href="#home" className="relative z-10 group">
+            <Link href="#" className="relative z-10 group">
               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
                 Verry
               </h1>

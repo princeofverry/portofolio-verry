@@ -4,7 +4,7 @@ import CardProject from "@/components/molecules/card/CardProject";
 export default function HomeProject() {
   return (
     <>
-      <section className="text-white pad-x pt-24 space-y-8">
+      <section className="text-white pad-x mb-8 pt-24 space-y-8">
         <div className="flex flex-row items-center gap-x-2">
           <h1 className="font-semibold text-2xl">Some Featured projects</h1>
           <Image
@@ -15,7 +15,7 @@ export default function HomeProject() {
             className="animate-pulse"
           />
         </div>
-        <div id="project"></div>
+        <div id="projects"></div>
         <CardProject />
       </section>
     </>
