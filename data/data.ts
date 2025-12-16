@@ -92,16 +92,21 @@ export const Award = [
   },
   {
     id: 3,
-    name: "Top 16 Indonesian Ship Contest (KKI), where I developed a comprehensive monitoring system for the ship and created a specialized dataset to support our mission goals.",
+    name: "Awardee of PPK Ormawa Funding for Digital Waste Bank Initiative (BEM FT)",
     year: "2024",
   },
   {
     id: 4,
+    name: "Top 16 Indonesian Ship Contest (KKI), where I developed a comprehensive monitoring system for the ship and created a specialized dataset to support our mission goals.",
+    year: "2024",
+  },
+  {
+    id: 5,
     name: "1st Place Fun Race Indonesian Ship Contest (KKI)",
     year: "2025",
   },
   {
-    id: 5,
+    id: 6,
     name: "Honorable Mention 2 (Juara Harapan 2) ASV Indonesian Ship Contest (KKI)",
     year: "2025",
   },
