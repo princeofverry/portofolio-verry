@@ -91,13 +91,13 @@ export default function Page() {
 
           <div className="flex items-center gap-6">
             <Link
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/verry-kurniawan/"
               className="text-slate-400 hover:text-cyan-400"
             >
               <Linkedin className="h-5 w-5" />
             </Link>
             <Link
-              href="https://github.com"
+              href="https://github.com/princeofverry"
               className="text-slate-400 hover:text-cyan-400"
             >
               <Github className="h-5 w-5" />
