@@ -62,3 +62,31 @@ export const Project = [
       "A real-time ship monitoring system for autonomous applications, tracking speed, direction, angle, and mission status.",
   },
 ];
+
+export const Award = [
+  {
+    id: 1,
+    name: "3rd UI/UX Competition: Developed Nourish+, a health app tackling maternal and child mortality and stunting.",
+    year: "2023",
+  },
+  {
+    id: 2,
+    name: "Top 5 Web Design Techomfest with Sinau Web App",
+    year: "2024",
+  },
+  {
+    id: 3,
+    name: "Top 16 Indonesian Ship Contest (KKI), where I developed a comprehensive monitoring system for the ship and created a specialized dataset to support our mission goals.",
+    year: "2024",
+  },
+  {
+    id: 4,
+    name: "1st Place Fun Race Indonesian Ship Contest (KKI)",
+    year: "2025",
+  },
+  {
+    id: 5,
+    name: "Honorable Mention 2 (Juara Harapan 2) ASV Indonesian Ship Contest (KKI)",
+    year: "2025",
+  },
+];

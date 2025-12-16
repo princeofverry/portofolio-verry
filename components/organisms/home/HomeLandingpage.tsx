@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import background from "/public/background/background-primary.svg";
 import Link from "next/link";
 
 export default function HomeLandingpage() {
@@ -11,7 +10,9 @@ export default function HomeLandingpage() {
         <div id="home"></div>
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${background.src})` }}
+          style={{
+            backgroundImage: "url(/background/background-primary.svg)",
+          }}
         />
 
         {/* Gradient Overlay */}

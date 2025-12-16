@@ -1,5 +1,4 @@
 import Image from "next/image";
-import stars from "/public/images/stars.svg";
 import {
   Accordion,
   AccordionContent,
@@ -15,10 +14,10 @@ export default function HomeExperience() {
         <div className="flex flex-row items-center gap-x-2">
           <h1 className="font-semibold text-2xl cursor-pointer">Experience</h1>
           <Image
-            src={stars}
+            src="/images/stars.svg"
             alt="stars"
-            height={30}
             width={30}
+            height={30}
             className="animate-pulse"
           />
         </div>
