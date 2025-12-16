@@ -77,6 +77,14 @@ export const Project = [
     description:
       "Custom YOLOv8 Architecture for Real-Time Drone-Based Fire and Smoke Detection on Raspberry Pi 5 with Hailo-8L",
   },
+  {
+    id: 7,
+    title: "Backend E-commerce with Golang",
+    image: "/images/golang.png",
+    link: "https://github.com/princeofverry/e-commerce-backend-go",
+    description:
+      "Golang-based E-commerce backend with JWT auth, product & category CRUD, cart & checkout flow, order management, payment integration, and real-time WebSocket updates.",
+  },
 ];
 
 export const Award = [
