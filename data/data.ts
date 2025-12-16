@@ -61,6 +61,22 @@ export const Project = [
     description:
       "A real-time ship monitoring system for autonomous applications, tracking speed, direction, angle, and mission status.",
   },
+  {
+    id: 5,
+    title: "KKI 2025",
+    image: "/images/_FNK0371.JPG",
+    link: "/",
+    description:
+      "Build algorithm of Computer Vision for Indonesian Ship Contest (KKI) 2025",
+  },
+  {
+    id: 6,
+    title: "Capstone Project Drone",
+    image: "/images/DRONE.jfif",
+    link: "/",
+    description:
+      "Custom YOLOv8 Architecture for Real-Time Drone-Based Fire and Smoke Detection on Raspberry Pi 5 with Hailo-8L",
+  },
 ];
 
 export const Award = [
