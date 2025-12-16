@@ -72,7 +72,7 @@ export const Project = [
   {
     id: 6,
     title: "Capstone Project Drone",
-    image: "/images/DRONE.jfif",
+    image: "/images/drone-us.jpeg",
     link: "/",
     description:
       "Custom YOLOv8 Architecture for Real-Time Drone-Based Fire and Smoke Detection on Raspberry Pi 5 with Hailo-8L",
