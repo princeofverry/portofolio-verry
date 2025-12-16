@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/atoms/navbar/Navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Footer from "@/components/atoms/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <TooltipProvider>
           <Navbar />
           {children}
+          <Footer />
         </TooltipProvider>
       </body>
     </html>

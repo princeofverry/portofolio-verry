@@ -2,7 +2,7 @@ import { Award } from "@/data/data";
 
 export default function HomeAward() {
   return (
-    <section className="text-white pad-x pt-24">
+    <section className="text-white pad-x pt-4">
       <div className="space-y-4">
         <h1 className="font-semibold text-2xl">Awards</h1>
         <p className="pb-4 text-justify">

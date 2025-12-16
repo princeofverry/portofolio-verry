@@ -3,6 +3,7 @@ import HomeExperience from "./HomeExperience";
 import HomeLandingpage from "./HomeLandingpage";
 import HomeMarquee from "./HomeMarquee";
 import HomeProject from "./HomeProject";
+import HomePublication from "./HomePublication";
 
 export default function HomeWrapper() {
   return (
@@ -11,6 +12,7 @@ export default function HomeWrapper() {
         <HomeLandingpage />
         <HomeMarquee />
         <HomeExperience />
+        <HomePublication />
         <HomeAward />
         <HomeProject />
       </section>

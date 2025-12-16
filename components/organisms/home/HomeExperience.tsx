@@ -10,7 +10,7 @@ import { Experiece } from "@/data/data";
 export default function HomeExperience() {
   return (
     <>
-      <section className="text-white pad-x pt-24 space-y-4">
+      <section id="experience" className="text-white pad-x pt-24 space-y-4">
         <div className="flex flex-row items-center gap-x-2">
           <h1 className="font-semibold text-2xl cursor-pointer">Experience</h1>
           <Image
