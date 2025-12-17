@@ -4,9 +4,9 @@ export const Experiece = [
     title: "Aterkia Diponegoro",
     image: "/images/aterkia.png",
     alt: "Aterkia",
-    position: "ML Engineer and Web Developer",
+    position: "Machine Learning Engineer & Web Developer",
     description:
-      "I developed a comprehensive monitoring system for the ship and created a specialized dataset to support our mission goals.",
+      "Contributed to the development of an integrated ship monitoring system that enables real-time data observation and analysis. I was responsible for designing and building a specialized dataset tailored to operational and mission-specific requirements, ensuring accurate data representation and reliable system performance. This work involved combining machine learning concepts with web-based visualization to support informed decision-making and enhance overall system efficiency.",
   },
   {
     id: "item-2",
@@ -15,7 +15,7 @@ export const Experiece = [
     alt: "Diskominfo Kota Semarang",
     position: "Fullstack Developer",
     description:
-      "I am a Fullstack Developer at Kominfo, working on a road pothole reporting website. I implemented YOLOv8 machine learning for automated pothole detection, combining web development and AI to create an efficient, user-friendly solution for public infrastructure reporting",
+      "Worked as a Fullstack Developer on a public road infrastructure reporting platform aimed at improving pothole management and urban maintenance. I implemented YOLOv8-based computer vision to automatically detect road potholes from image data, integrating machine learning models into a web application. This project combined frontend and backend development with AI-driven automation to deliver an efficient, scalable, and user-friendly reporting system for government use.",
   },
   {
     id: "item-3",
@@ -24,7 +24,16 @@ export const Experiece = [
     alt: "Bangkit Academy",
     position: "Machine Learning Path",
     description:
-      "I am part of the Machine Learning track at Bangkit Academy, where I focus on developing expertise in applying machine learning techniques to real-world problems. Through this program, I gain hands-on experience with tools and algorithms that power modern AI systems, preparing me for a career in this rapidly growing field. The training emphasizes practical knowledge, from model development to deployment, giving me a strong foundation in machine learning technologies.",
+      "Selected as a participant in the Machine Learning Path at Bangkit Academy, a competitive program led by Google, GoTo, Tokopedia, and Traveloka. Throughout the program, I focused on applying machine learning techniques to solve real-world problems, gaining hands-on experience in data preprocessing, model training, evaluation, and deployment. The curriculum emphasized industry-relevant tools and best practices, strengthening both my technical skills and my readiness for a professional career in machine learning and AI.",
+  },
+  {
+    id: "item-4",
+    title: "Teaching Assistant - Diponegoro University",
+    image: "/images/undip.png",
+    alt: "Asisten Praktikum",
+    position: "Teaching Assistant",
+    description:
+      "Served as a Teaching Assistant for the Digital Systems and Mobile Device Programming courses. I assisted students in understanding fundamental concepts such as digital logic, combinational and sequential circuits, as well as mobile application development principles. My responsibilities included guiding practical lab sessions, helping debug code and hardware simulations, and supporting students in completing assignments and projects, while fostering an effective and collaborative learning environment.",
   },
 ];
 

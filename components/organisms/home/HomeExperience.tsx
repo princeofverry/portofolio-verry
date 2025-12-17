@@ -1,11 +1,6 @@
-import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Experiece } from "@/data/data";
+import Image from "next/image"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Experiece } from "@/data/data"
 
 export default function HomeExperience() {
   return (
@@ -13,36 +8,29 @@ export default function HomeExperience() {
       <section id="experience" className="text-white pad-x pt-24 space-y-4">
         <div className="flex flex-row items-center gap-x-2">
           <h1 className="font-semibold text-2xl cursor-pointer">Experience</h1>
-          <Image
-            src="/images/stars.svg"
-            alt="stars"
-            width={30}
-            height={30}
-            className="animate-pulse"
-          />
+          <Image src="/images/stars.svg" alt="stars" width={30} height={30} className="animate-pulse" />
         </div>
         <p>
-          I have a broad background in software engineering, gained through
-          part-time roles as a developer, independent learning initiatives, and
-          hands-on experience during internships.
+          I have a broad background in software engineering, gained through part-time roles as a developer, independent
+          learning initiatives, and hands-on experience during internships.
         </p>
         {Experiece.map((item, i) => (
           <Accordion key={i} type="single" collapsible>
             <AccordionItem value={item.id}>
               <AccordionTrigger>
                 <div className="flex flex-row items-center gap-x-4">
-                  <Image
-                    alt={item.alt}
-                    height={1000}
-                    width={1000}
-                    src={item.image}
-                    className="max-w-[50px]"
-                  />
+                  <div className="bg-white dark:bg-white/90 p-2 rounded-lg border border-gray-200 dark:border-gray-300 shrink-0">
+                    <Image
+                      alt={item.alt}
+                      height={1000}
+                      width={1000}
+                      src={item.image || "/placeholder.svg"}
+                      className="max-w-[50px] w-[50px] h-[50px] object-contain"
+                    />
+                  </div>
                   <div>
                     <h1 className="font-semibold">{item.title}</h1>
-                    <p className="font-base text-sm text-muted-foreground">
-                      {item.position}
-                    </p>
+                    <p className="font-base text-sm text-muted-foreground">{item.position}</p>
                   </div>
                 </div>
               </AccordionTrigger>
@@ -52,5 +40,5 @@ export default function HomeExperience() {
         ))}
       </section>
     </>
-  );
+  )
 }
