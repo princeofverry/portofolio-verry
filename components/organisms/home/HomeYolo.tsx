@@ -400,7 +400,7 @@ export default function HomeYolo() {
   };
 
   return (
-    <div className="min-h-screen pad-x text-white py-8">
+    <div id="yolo" className="min-h-screen pad-x text-white py-8">
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="text-center space-y-3">
           <h1 className="text-xl md:text-5xl font-bold text-white">

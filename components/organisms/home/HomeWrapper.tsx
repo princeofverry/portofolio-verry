@@ -1,4 +1,5 @@
 import HomeAward from "./HomeAward";
+import HomeContact from "./HomeContact";
 import HomeExperience from "./HomeExperience";
 import HomeLandingpage from "./HomeLandingpage";
 import HomeMarquee from "./HomeMarquee";
@@ -17,6 +18,7 @@ export default function HomeWrapper() {
         <HomeAward />
         <HomeProject />
         <HomeYolo />
+        <HomeContact />
       </section>
     </>
   );

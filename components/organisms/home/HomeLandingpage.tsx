@@ -8,7 +8,10 @@ import Aurora from "../aurora/Aurora";
 
 export default function Page() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-black">
+    <main
+      id="home"
+      className="relative min-h-screen w-full overflow-hidden bg-black"
+    >
       <div className="absolute inset-0 z-0">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}

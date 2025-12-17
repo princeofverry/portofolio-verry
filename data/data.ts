@@ -174,3 +174,33 @@ export const techStack = [
     image: "/images/opencv.png",
   },
 ];
+
+export const NAVIGATION_LINKS = [
+  // { label: "About", href: "#" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Object Detection", href: "#yolo" },
+  { label: "Contact", href: "#contact" },
+];
+
+export const socialLinks = [
+  {
+    icon: "Instagram",
+    href: "https://instagram.com/princeofverry",
+    label: "Instagram",
+  },
+  {
+    icon: "Linkedin",
+    href: "https://linkedin.com/in/verry-kurniawan",
+    label: "LinkedIn",
+  },
+  { icon: "Github", href: "https://github.com/princeofverry", label: "GitHub" },
+  { icon: "Mail", href: "mailto:vexykrwn@gmail.com", label: "Email" },
+];
+
+export const marqueeTexts = [
+  "Let's Collaborate",
+  "Build Together",
+  "Create Amazing Things",
+  "Innovate & Grow",
+];
