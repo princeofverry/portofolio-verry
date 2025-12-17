@@ -212,7 +212,7 @@ export default function HomeYolo() {
   }, [imageUrl, session]);
 
   return (
-    <div className="pad-x min-h-screen bg-black text-white py-4">
+    <div id="yolo" className="pad-x min-h-screen bg-black text-white py-4">
       <div className="mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
