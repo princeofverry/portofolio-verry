@@ -4,6 +4,7 @@ import HomeLandingpage from "./HomeLandingpage";
 import HomeMarquee from "./HomeMarquee";
 import HomeProject from "./HomeProject";
 import HomePublication from "./HomePublication";
+import HomeYolo from "./HomeYolo";
 
 export default function HomeWrapper() {
   return (
@@ -15,6 +16,7 @@ export default function HomeWrapper() {
         <HomePublication />
         <HomeAward />
         <HomeProject />
+        <HomeYolo />
       </section>
     </>
   );
