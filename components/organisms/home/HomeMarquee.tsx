@@ -1,44 +1,7 @@
 import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
 
-const techStack = [
-  {
-    name: "Arduino",
-    image: "/images/arduino.png",
-  },
-  {
-    name: "Firebase",
-    image: "/images/firebase.png",
-  },
-  {
-    name: "JavaScript",
-    image: "/images/javascript.png",
-  },
-  {
-    name: "Python",
-    image: "/images/python.png",
-  },
-  {
-    name: "React",
-    image: "/images/react.png",
-  },
-  {
-    name: "Tailwind",
-    image: "/images/tailwind.png",
-  },
-  {
-    name: "Tensorflow",
-    image: "/images/tensorflow.png",
-  },
-  {
-    name: "TypeScript",
-    image: "/images/typescript.png",
-  },
-  {
-    name: "Golang",
-    image: "/images/golang.png",
-  },
-];
+import { techStack } from "@/data/data";
 
 export default function HomeMarquee() {
   return (

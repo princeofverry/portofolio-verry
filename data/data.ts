@@ -119,3 +119,58 @@ export const Award = [
     year: "2025",
   },
 ];
+
+export const techStack = [
+  {
+    name: "Arduino",
+    image: "/images/arduino.png",
+  },
+  {
+    name: "Firebase",
+    image: "/images/firebase.png",
+  },
+  {
+    name: "JavaScript",
+    image: "/images/javascript.png",
+  },
+  {
+    name: "Python",
+    image: "/images/python.png",
+  },
+  {
+    name: "React",
+    image: "/images/react.png",
+  },
+  {
+    name: "Tailwind",
+    image: "/images/tailwind.png",
+  },
+  {
+    name: "Tensorflow",
+    image: "/images/tensorflow.png",
+  },
+  {
+    name: "TypeScript",
+    image: "/images/typescript.png",
+  },
+  {
+    name: "Golang",
+    image: "/images/golang.png",
+  },
+  // {
+  //   name: "NextJs",
+  //   image: "/images/nextJS.png",
+  // },
+  {
+    name: "Postgre",
+    image: "/images/postgre.png",
+  },
+  // {
+  //   name: "Flask",
+  //   image: "/images/flask.png",
+  // },
+  {
+    name: "OpenCV",
+    image: "/images/opencv.png",
+  },
+];
