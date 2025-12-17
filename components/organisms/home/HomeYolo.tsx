@@ -212,14 +212,14 @@ export default function HomeYolo() {
   }, [imageUrl, session]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <div className="max-w-5xl mx-auto space-y-8">
+    <div className="pad-x min-h-screen bg-black text-white py-4">
+      <div className="mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold text-white">
+          <h1 className="text-xl md:text-4xl font-bold text-white">
             YOLOv5 Object Detection
           </h1>
-          <p className="text-gray-400">
+          <p className="text-gray-400 text-sm">
             🔒 Client-side only your images never leave your browser
           </p>
         </div>
