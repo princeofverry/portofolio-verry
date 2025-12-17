@@ -403,8 +403,10 @@ export default function HomeYolo() {
     <div className="min-h-screen pad-x text-white py-8">
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="text-center space-y-3">
-          <h1 className="text-5xl font-bold text-white">YOLOv5 Detection</h1>
-          <p className="text-white/80">
+          <h1 className="text-xl md:text-5xl font-bold text-white">
+            Object Detection
+          </h1>
+          <p className="text-white/80 text-sm">
             100% Client-side - Your privacy is protected
           </p>
         </div>
@@ -425,7 +427,7 @@ export default function HomeYolo() {
             onClick={() => switchMode("upload")}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               mode === "upload"
-                ? "bg-emerald-600 text-white"
+                ? "bg-blue-500 text-white"
                 : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"
             }`}
           >
@@ -435,7 +437,7 @@ export default function HomeYolo() {
             onClick={() => switchMode("camera")}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               mode === "camera"
-                ? "bg-emerald-600 text-white"
+                ? "bg-blue-500 text-white"
                 : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"
             }`}
           >
@@ -521,7 +523,7 @@ export default function HomeYolo() {
                 <button
                   onClick={startCamera}
                   disabled={!session}
-                  className="px-6 py-3 bg-emerald-600 rounded-lg font-medium hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:bg-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Start Camera
                 </button>
