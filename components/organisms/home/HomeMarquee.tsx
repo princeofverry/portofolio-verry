@@ -34,6 +34,10 @@ const techStack = [
     name: "TypeScript",
     image: "/images/typescript.png",
   },
+  {
+    name: "Golang",
+    image: "/images/golang.png",
+  },
 ];
 
 export default function HomeMarquee() {

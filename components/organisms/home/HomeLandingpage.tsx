@@ -17,7 +17,10 @@ export default function Page() {
           speed={0.5}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90" />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/60
+  md:from-black/10 md:via-black/10 md:to-black/60"
+        />
       </div>
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between min-h-screen max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-28 md:pt-32 pb-20">
@@ -48,14 +51,14 @@ export default function Page() {
           <p className="text-base md:text-lg lg:text-xl text-slate-300 mb-4">
             A{" "}
             <span className="text-white font-semibold">
-              front-end developer
+              full-stack developer
             </span>{" "}
-            specializing in{" "}
-            <span className="text-cyan-400 font-semibold">IoT</span> and{" "}
+            building <span className="text-cyan-400 font-semibold">IoT</span>{" "}
+            platforms and{" "}
             <span className="text-blue-400 font-semibold">
-              Machine Learning
-            </span>
-            , with a focus on computer vision.
+              AI-powered computer vision
+            </span>{" "}
+            applications.
           </p>
 
           <p className="text-sm md:text-base text-muted-foreground mb-10">
@@ -91,13 +94,13 @@ export default function Page() {
 
           <div className="flex items-center gap-6">
             <Link
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/verry-kurniawan/"
               className="text-slate-400 hover:text-cyan-400"
             >
               <Linkedin className="h-5 w-5" />
             </Link>
             <Link
-              href="https://github.com"
+              href="https://github.com/princeofverry"
               className="text-slate-400 hover:text-cyan-400"
             >
               <Github className="h-5 w-5" />

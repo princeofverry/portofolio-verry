@@ -72,10 +72,18 @@ export const Project = [
   {
     id: 6,
     title: "Capstone Project Drone",
-    image: "/images/DRONE.jfif",
+    image: "/images/drone-us.jpeg",
     link: "/",
     description:
       "Custom YOLOv8 Architecture for Real-Time Drone-Based Fire and Smoke Detection on Raspberry Pi 5 with Hailo-8L",
+  },
+  {
+    id: 7,
+    title: "Backend E-commerce with Golang",
+    image: "/images/golang.png",
+    link: "https://github.com/princeofverry/e-commerce-backend-go",
+    description:
+      "Golang-based E-commerce backend with JWT auth, product & category CRUD, cart & checkout flow, order management, payment integration, and real-time WebSocket updates.",
   },
 ];
 
@@ -92,16 +100,21 @@ export const Award = [
   },
   {
     id: 3,
-    name: "Top 16 Indonesian Ship Contest (KKI), where I developed a comprehensive monitoring system for the ship and created a specialized dataset to support our mission goals.",
+    name: "Awardee of PPK Ormawa Funding for Digital Waste Bank Initiative (BEM FT)",
     year: "2024",
   },
   {
     id: 4,
+    name: "Top 16 Indonesian Ship Contest (KKI), where I developed a comprehensive monitoring system for the ship and created a specialized dataset to support our mission goals.",
+    year: "2024",
+  },
+  {
+    id: 5,
     name: "1st Place Fun Race Indonesian Ship Contest (KKI)",
     year: "2025",
   },
   {
-    id: 5,
+    id: 6,
     name: "Honorable Mention 2 (Juara Harapan 2) ASV Indonesian Ship Contest (KKI)",
     year: "2025",
   },
