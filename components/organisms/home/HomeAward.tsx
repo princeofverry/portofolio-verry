@@ -1,10 +1,20 @@
 import { Award } from "@/data/data";
+import Image from "next/image";
 
 export default function HomeAward() {
   return (
     <section className="text-white pad-x pt-4">
       <div className="space-y-4">
-        <h1 className="font-semibold text-2xl">Awards</h1>
+        <div className="flex flex-row items-center gap-x-2">
+          <h1 className="font-semibold text-2xl">Awards</h1>
+          <Image
+            src="/images/stars.svg"
+            alt="stars"
+            width={30}
+            height={30}
+            className="animate-pulse"
+          />
+        </div>
         <p className="pb-4 text-justify">
           Awards represent significant milestones in my career that I take pride
           in. These achievements highlight my dedication, skills, and the impact
