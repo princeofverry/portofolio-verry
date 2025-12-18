@@ -97,7 +97,7 @@ const Navbar = () => {
               "https://drive.google.com/file/d/15dRcYrE5MS761QplxvjjLEnVN9reinnC/view?usp=sharing"
             }
           >
-            <span className="relative z-10">Get Started</span>
+            <span className="relative z-10">My CV</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
           </Link>
         </button>
