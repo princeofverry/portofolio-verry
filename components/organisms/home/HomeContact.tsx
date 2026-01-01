@@ -13,7 +13,7 @@ const HomeContact = () => {
   };
 
   return (
-    <div id="contact" className="relative w-full max-w-4xl mx-auto px-4 pb-4">
+    <div id="contact" className="relative w-full max-w-4xl mx-auto px-4 pb-4 my-16">
       {/* Background Gradient Effects */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl animate-pulse" />
