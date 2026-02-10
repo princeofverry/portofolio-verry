@@ -44,7 +44,15 @@ export const Project = [
     image: "/images/dopamind.png",
     link: "https://dopamind.site",
     description:
-      "An app from the Bangkit Academy capstone project that tracks users' mood through daily diary entries, offering insights into mental health.",
+      "Bangkit Academy capstone app that tracks users' mood through daily diary entries and provides mental health insights.",
+    stack: ["Android", "Kotlin", "Firebase", "ML", "TensorFlow Lite"],
+    role: "ML / App Contributor",
+    highlights: [
+      "Daily journal → mood tracking & summary",
+      "Insight dashboard + personalized recommendation",
+      "Optimized model for on-device inference",
+    ],
+    repo: null,
   },
   {
     id: 2,
@@ -52,7 +60,15 @@ export const Project = [
     image: "/images/codelingo.png",
     link: "https://codelingo-dev.vercel.app/",
     description:
-      "A coding platform for elementary school students that teaches programming basics through fun games and challenges.",
+      "Coding platform for elementary students that teaches fundamentals through games and challenges.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Vercel"],
+    role: "Full-stack (mostly Frontend)",
+    highlights: [
+      "Gamified lessons & quiz flow",
+      "Responsive UI for kids-friendly UX",
+      "Progress tracking per lesson",
+    ],
+    repo: null,
   },
   {
     id: 3,
@@ -60,7 +76,15 @@ export const Project = [
     image: "/images/the-ace.png",
     link: "https://theace-2024.vercel.app/",
     description:
-      "A competition registration website for the Computer Engineering Department at Diponegoro University, streamlining event sign-ups.",
+      "Competition registration website for Computer Engineering UNDIP, streamlining event sign-ups.",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Firebase"],
+    role: "Frontend Developer",
+    highlights: [
+      "Registration flow + validation",
+      "Admin-friendly data management",
+      "Mobile-first responsive layout",
+    ],
+    repo: null,
   },
   {
     id: 4,
@@ -68,7 +92,15 @@ export const Project = [
     image: "/images/monitoring.png",
     link: "/",
     description:
-      "A real-time ship monitoring system for autonomous applications, tracking speed, direction, angle, and mission status.",
+      "Real-time ship monitoring for autonomous applications: speed, direction, angle, and mission status.",
+    stack: ["React", "Leaflet", "Firebase RTDB", "WebSocket"],
+    role: "Software / Monitoring UI",
+    highlights: [
+      "Realtime telemetry visualization",
+      "Map tracking + path history",
+      "Mission state & alert indicators",
+    ],
+    repo: null,
   },
   {
     id: 5,
@@ -76,7 +108,15 @@ export const Project = [
     image: "/images/_FNK0371.JPG",
     link: "/",
     description:
-      "Build algorithm of Computer Vision for Indonesian Ship Contest (KKI) 2025",
+      "Computer Vision algorithm development for Indonesian Ship Contest (KKI) 2025.",
+    stack: ["Python", "OpenCV", "YOLO", "Edge/Robotics"],
+    role: "Computer Vision Engineer",
+    highlights: [
+      "Robust detection under outdoor lighting",
+      "Optimized inference pipeline for realtime",
+      "Integrated CV output to autonomy stack",
+    ],
+    repo: null,
   },
   {
     id: 6,
@@ -84,7 +124,15 @@ export const Project = [
     image: "/images/drone-us.jpeg",
     link: "/",
     description:
-      "Custom YOLOv8 Architecture for Real-Time Drone-Based Fire and Smoke Detection on Raspberry Pi 5 with Hailo-8L",
+      "Custom YOLOv8 for real-time drone-based fire & smoke detection on Raspberry Pi 5 with Hailo-8L.",
+    stack: ["YOLOv8", "Python", "Raspberry Pi 5", "Hailo-8L", "ONNX"],
+    role: "Computer Vision / Edge AI",
+    highlights: [
+      "Edge inference (no cloud dependency)",
+      "Fire vs smoke classification with confidence thresholding",
+      "Benchmarking latency & FPS improvements",
+    ],
+    repo: null,
   },
   {
     id: 7,
@@ -92,7 +140,15 @@ export const Project = [
     image: "/images/golang.png",
     link: "https://github.com/princeofverry/e-commerce-backend-go",
     description:
-      "Golang-based E-commerce backend with JWT auth, product & category CRUD, cart & checkout flow, order management, payment integration, and real-time WebSocket updates.",
+      "Golang E-commerce backend with JWT auth, CRUD, cart/checkout, orders, payment integration, and WebSocket updates.",
+    stack: ["Go", "Gin", "GORM", "MySQL", "JWT", "WebSocket"],
+    role: "Backend Engineer",
+    highlights: [
+      "JWT auth + role-based endpoints",
+      "Checkout → order lifecycle management",
+      "Realtime order status via WebSocket",
+    ],
+    repo: "https://github.com/princeofverry/e-commerce-backend-go",
   },
 ];
 
