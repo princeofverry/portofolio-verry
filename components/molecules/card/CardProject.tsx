@@ -9,6 +9,52 @@ import {
 } from "@/components/ui/card";
 import { ProjectDetailDialog } from "../detail/ProjectDetailDialog";
 
+function TechBadges({ stack }: { stack?: string[] }) {
+  if (!stack?.length) return null;
+
+  const first2 = stack.slice(0, 2);
+  const nextUpTo5 = stack.slice(2, 5);
+
+  const hasMoreThan2 = stack.length > 2;
+  const hasMoreThan5 = stack.length > 5;
+
+  const badgeBase =
+    "inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] leading-none";
+
+  return (
+    <div className="flex flex-wrap items-center gap-2 pt-1">
+      {first2.map((tech) => (
+        <span key={tech} className={`${badgeBase} text-gray-200`}>
+          {tech}
+        </span>
+      ))}
+
+      {nextUpTo5.map((tech) => (
+        <span
+          key={tech}
+          className={`hidden sm:inline-flex ${badgeBase} text-gray-200`}
+        >
+          {tech}
+        </span>
+      ))}
+
+      {/* mobile indicator (badge style biar sejajar) */}
+      {hasMoreThan2 && (
+        <span className={`sm:hidden ${badgeBase} text-gray-400`}>
+          +{stack.length - 2}
+        </span>
+      )}
+
+      {/* desktop indicator */}
+      {hasMoreThan5 && (
+        <span className={`hidden sm:inline-flex ${badgeBase} text-gray-400`}>
+          +{stack.length - 5}
+        </span>
+      )}
+    </div>
+  );
+}
+
 export default function CardProject() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -38,6 +84,8 @@ export default function CardProject() {
                   <CardTitle className="text-xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
                     {item.title}
                   </CardTitle>
+
+                  <TechBadges stack={item.stack} />
 
                   <CardDescription className="text-gray-300 line-clamp-2">
                     {item.description}

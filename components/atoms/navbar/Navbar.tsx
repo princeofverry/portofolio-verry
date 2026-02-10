@@ -144,7 +144,7 @@ const Navbar = () => {
         </ul>
 
         <button className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/40 hover:scale-105 active:scale-95">
-          <Link href="https://drive.google.com/file/d/15dRcYrE5MS761QplxvjjLEnVN9reinnC/view?usp=sharing">
+          <Link href="https://drive.google.com/file/d/1cY3MzP_xOO_cCwoGFVq42lLK_xg2XwzL/view?usp=sharing">
             <span className="relative z-10">My CV</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </Link>

@@ -39,11 +39,17 @@ export function ProjectDetailDialog({
       <AlertDialogContent
         className="
     max-w-2xl
+    max-h-[85vh]
+    overflow-y-auto
+
     border border-white/10
     bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950
     text-white
     shadow-2xl shadow-black/80
     backdrop-blur-xl
+
+    rounded-xl
+    p-6
   "
       >
         <AlertDialogHeader className="space-y-4">
@@ -99,10 +105,10 @@ export function ProjectDetailDialog({
         </AlertDialogHeader>
 
         <AlertDialogFooter className="gap-2">
-          <AlertDialogCancel>Close</AlertDialogCancel>
+          <AlertDialogCancel className="text-black/80">Close</AlertDialogCancel>
 
           {project.repo && (
-            <Button variant="outline" asChild>
+            <Button variant="outline" className="text-black/80" asChild>
               <Link href={project.repo} target="_blank">
                 GitHub
               </Link>
