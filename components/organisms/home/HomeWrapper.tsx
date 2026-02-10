@@ -5,8 +5,8 @@ import HomeLandingpage from "./HomeLandingpage";
 import HomeMarquee from "./HomeMarquee";
 import HomeProject from "./HomeProject";
 import HomePublication from "./HomePublication";
-import HomeStatistics from "./HomeStatistics";
-import HomeYolo from "./HomeYolo";
+// import HomeStatistics from "./HomeStatistics";
+// import HomeYolo from "./HomeYolo";
 
 export default function HomeWrapper() {
   return (
@@ -14,12 +14,12 @@ export default function HomeWrapper() {
       <section className="overflow-hidden bg-black">
         <HomeLandingpage />
         <HomeMarquee />
-        <HomeStatistics/>
+        {/* <HomeStatistics /> */}
         <HomeExperience />
         <HomePublication />
         <HomeAward />
         <HomeProject />
-        <HomeYolo />
+        {/* <HomeYolo /> */}
         <HomeContact />
       </section>
     </>

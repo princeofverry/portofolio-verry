@@ -4,6 +4,7 @@ import { useState, type MouseEvent, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { NAVIGATION_LINKS } from "@/data/data";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,33 +12,74 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("#home");
   const [mounted, setMounted] = useState(false);
 
+  const pathname = usePathname();
+  const router = useRouter();
+
   useEffect(() => {
     setMounted(true);
 
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+  // Optional: kalau masuk halaman /#section dari halaman lain,
+  // begitu route selesai, dia auto scroll halus ke section tsb.
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    // biar section sudah ter-render dulu
+    requestAnimationFrame(() => {
+      const target = document.querySelector(hash);
+      if (!target) return;
+
+      const offset = -85;
+      const top = target.getBoundingClientRect().top + window.scrollY + offset;
+
+      window.scrollTo({ top, behavior: "smooth" });
+      setActiveSection(hash);
+    });
+  }, [pathname]);
+
+  const toggleMobileMenu = () => setMobileMenuOpen((v) => !v);
+
+  const scrollToHash = (hash: string) => {
+    const targetElement = document.querySelector(hash);
+    if (!targetElement) return;
+
+    const offset = -85;
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY + offset;
+
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
   };
 
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setActiveSection(href);
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      const offset = -85;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY + offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+  const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    // kalau link biasa (contoh: "/yolo") biarkan normal
+    const isHashLink = href.startsWith("#");
+
+    if (!isHashLink) {
+      setMobileMenuOpen(false);
+      return;
     }
+
+    e.preventDefault();
+
+    // kalau lagi di home → smooth scroll
+    if (pathname === "/") {
+      setActiveSection(href);
+      scrollToHash(href);
+      setMobileMenuOpen(false);
+      return;
+    }
+
+    // kalau lagi bukan home → balik ke home dengan hash
+    // (nanti useEffect di atas yang bikin scroll halus setelah render)
+    setActiveSection(href);
+    router.push(`/${href}`); // contoh: "/#experience"
     setMobileMenuOpen(false);
   };
 
@@ -59,46 +101,52 @@ const Navbar = () => {
           transition-all duration-500 ease-out`}
       >
         <a
-          href="#"
+          href="#home"
           className="group relative text-2xl font-bold"
-          onClick={(e) => handleLinkClick(e, "#home")}
+          onClick={(e) => handleNavClick(e, "#home")}
         >
           <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent transition-all duration-300 group-hover:from-purple-600 group-hover:via-blue-500 group-hover:to-cyan-400">
             Verry
           </span>
-          <div className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-cyan-400 to-purple-600 transition-all duration-300 group-hover:w-full"></div>
+          <div className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-cyan-400 to-purple-600 transition-all duration-300 group-hover:w-full" />
         </a>
 
         <ul className="flex items-center gap-2">
           {NAVIGATION_LINKS.map((item, index) => (
             <li key={index}>
-              <a
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ${
-                  activeSection === item.href
-                    ? "text-cyan-400"
-                    : "text-slate-300 hover:text-white"
-                }`}
-                href={item.href}
-                onClick={(e) => handleLinkClick(e, item.href)}
-              >
-                <span className="relative z-10">{item.label}</span>
-                {activeSection === item.href && (
-                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm animate-in fade-in zoom-in-95 duration-300"></span>
-                )}
-                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/0 to-purple-600/0 opacity-0 transition-all duration-300 hover:from-cyan-500/10 hover:to-purple-600/10 hover:opacity-100"></span>
-              </a>
+              {item.href.startsWith("#") ? (
+                <a
+                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                    activeSection === item.href
+                      ? "text-cyan-400"
+                      : "text-slate-300 hover:text-white"
+                  }`}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  {activeSection === item.href && (
+                    <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm animate-in fade-in zoom-in-95 duration-300" />
+                  )}
+                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/0 to-purple-600/0 opacity-0 transition-all duration-300 hover:from-cyan-500/10 hover:to-purple-600/10 hover:opacity-100" />
+                </a>
+              ) : (
+                <Link
+                  className="relative px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:text-white"
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
 
         <button className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/40 hover:scale-105 active:scale-95">
-          <Link
-            href={
-              "https://drive.google.com/file/d/15dRcYrE5MS761QplxvjjLEnVN9reinnC/view?usp=sharing"
-            }
-          >
+          <Link href="https://drive.google.com/file/d/15dRcYrE5MS761QplxvjjLEnVN9reinnC/view?usp=sharing">
             <span className="relative z-10">My CV</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </Link>
         </button>
       </div>
@@ -120,14 +168,15 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between px-4 py-4">
           <a
-            href="#"
+            href="#home"
             className="group relative text-xl font-bold"
-            onClick={(e) => handleLinkClick(e, "#home")}
+            onClick={(e) => handleNavClick(e, "#home")}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Verry
             </span>
           </a>
+
           <button
             className="relative rounded-lg p-2 text-white transition-all duration-300 hover:bg-white/10 focus:outline-none active:scale-90"
             onClick={toggleMobileMenu}
@@ -147,46 +196,30 @@ const Navbar = () => {
         >
           <ul className="flex flex-col gap-1 px-3 pb-4">
             {NAVIGATION_LINKS.map((item, index) => (
-              <li
-                key={index}
-                className={`${
-                  isMobileMenuOpen
-                    ? "animate-in slide-in-from-left-4 fade-in"
-                    : ""
-                }`}
-                style={{
-                  animationDelay: `${index * 50}ms`,
-                  animationDuration: "400ms",
-                }}
-              >
-                <a
-                  className={`block rounded-lg px-4 py-3 text-base font-medium transition-all duration-300 ${
-                    activeSection === item.href
-                      ? "bg-gradient-to-r from-cyan-500/20 to-purple-600/20 text-cyan-400"
-                      : "text-slate-300 hover:bg-white/5 hover:text-white active:scale-95"
-                  }`}
-                  href={item.href}
-                  onClick={(e) => handleLinkClick(e, item.href)}
-                >
-                  {item.label}
-                </a>
+              <li key={index}>
+                {item.href.startsWith("#") ? (
+                  <a
+                    className={`block rounded-lg px-4 py-3 text-base font-medium transition-all duration-300 ${
+                      activeSection === item.href
+                        ? "bg-gradient-to-r from-cyan-500/20 to-purple-600/20 text-cyan-400"
+                        : "text-slate-300 hover:bg-white/5 hover:text-white active:scale-95"
+                    }`}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    className="block rounded-lg px-4 py-3 text-base font-medium text-slate-300 transition-all duration-300 hover:bg-white/5 hover:text-white active:scale-95"
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
-            <li
-              className={`mt-2 px-4 ${
-                isMobileMenuOpen
-                  ? "animate-in slide-in-from-left-4 fade-in"
-                  : ""
-              }`}
-              style={{
-                animationDelay: `${NAVIGATION_LINKS.length * 50}ms`,
-                animationDuration: "400ms",
-              }}
-            >
-              <button className="w-full rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/40 active:scale-95">
-                Get Started
-              </button>
-            </li>
           </ul>
         </div>
       </div>
