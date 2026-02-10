@@ -105,7 +105,7 @@ export const Project = [
   {
     id: 5,
     title: "KKI 2025",
-    image: "/images/_FNK0371.JPG",
+    image: "/images/fnk0371.jpg",
     link: "/",
     description:
       "Computer Vision algorithm development for Indonesian Ship Contest (KKI) 2025.",
