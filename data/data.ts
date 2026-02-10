@@ -57,7 +57,7 @@ export const Project = [
   {
     id: 2,
     title: "Codelingo",
-    image: "/images/codelingo.png",
+    image: "/images/codelingo1.png",
     link: "https://codelingo-dev.vercel.app/",
     description:
       "Coding platform for elementary students that teaches fundamentals through games and challenges.",
