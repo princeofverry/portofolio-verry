@@ -188,8 +188,8 @@ export const NAVIGATION_LINKS = [
   // { label: "About", href: "#" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Object Detection", href: "/yolo" },
   { label: "Contact", href: "#contact" },
+  { label: "Object Detection", href: "/yolo" },
 ];
 
 export const socialLinks = [
